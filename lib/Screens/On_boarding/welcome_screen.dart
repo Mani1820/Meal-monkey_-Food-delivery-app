@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:meal_monkey/Screens/On_boarding/login_screen.dart';
+import 'package:meal_monkey/Screens/On_boarding/signup_screen.dart';
 import 'package:meal_monkey/common/color_entension.dart';
 import 'package:meal_monkey/common_widget/rounded_button.dart';
 
@@ -60,7 +62,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
             ),
             SizedBox(
-              height: 15,
+              height: 25,
             ),
             Text(
               "Discover the best foods from over 1,000\nrestaurants and fast delivery to your\ndoorstep",
@@ -72,11 +74,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               textAlign: TextAlign.center,
             ),
             SizedBox(
-              height: 25,
+              height: 80,
             ),
             RoundedButton(
               title: 'Login',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (ctx) => LoginScreen(),
+                  ),
+                );
+              },
               type: ButtonType.backgroundPrimary,
             ),
             SizedBox(
@@ -84,7 +92,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
             RoundedButton(
               title: 'Create an Account',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (ctx) => SignupScreen(),
+                  ),
+                );
+              },
               type: ButtonType.textPrimary,
             ),
           ],

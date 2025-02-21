@@ -17,11 +17,12 @@ class RoundedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size media = MediaQuery.of(context).size;
-    final double height = media.height * 0.07;
+    final double height = media.height * 0.068;
     final double width = media.width * double.infinity;
     return InkWell(
       onTap: onPressed,
       child: Container(
+        
         padding: EdgeInsets.symmetric(
           horizontal: 20,
         ),
