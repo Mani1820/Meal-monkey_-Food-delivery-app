@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meal_monkey/Screens/On_boarding/reset_password_screen.dart';
+import 'package:meal_monkey/Screens/On_boarding/Reset_Password/reset_password_screen.dart';
 import 'package:meal_monkey/Screens/On_boarding/signup_screen.dart';
 import 'package:meal_monkey/common/color_entension.dart';
 import 'package:meal_monkey/common_widget/rounded_button.dart';

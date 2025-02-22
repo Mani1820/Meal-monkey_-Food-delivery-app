@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meal_monkey/Screens/On_boarding/Reset_Password/otp_screen.dart';
 import 'package:meal_monkey/common/color_entension.dart';
+import 'package:meal_monkey/common_widget/rounded_button.dart';
+import 'package:meal_monkey/common_widget/rounded_text_field.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({super.key});
@@ -33,6 +36,27 @@ class ResetPasswordScreen extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 25,
+            ),
+            RoundedTextField(
+              hintText: 'Email or phone number',
+              controller: TextEditingController(),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            RoundedButton(
+              title: 'Get Opt',
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (ctx) => OtpScreen(),
+                  ),
+                );
+              },
             ),
           ],
         ),

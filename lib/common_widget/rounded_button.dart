@@ -22,7 +22,6 @@ class RoundedButton extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        
         padding: EdgeInsets.symmetric(
           horizontal: 20,
         ),
@@ -46,11 +45,12 @@ class RoundedButton extends StatelessWidget {
           child: Text(
             title,
             style: TextStyle(
-              color: type == ButtonType.backgroundPrimary
-                  ? Colors.white
-                  : ColorExtension.primaryBg,
-              fontSize: 15,
-            ),
+                color: type == ButtonType.backgroundPrimary
+                    ? Colors.white
+                    : ColorExtension.primaryBg,
+                fontSize: 15,
+                fontFamily: 'Metropolis',
+                fontWeight: FontWeight.w500),
           ),
         ),
       ),

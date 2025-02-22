@@ -74,7 +74,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               textAlign: TextAlign.center,
             ),
             SizedBox(
-              height: 80,
+              height: 60,
             ),
             RoundedButton(
               title: 'Login',
