@@ -6,10 +6,12 @@ class RoundedTextField extends StatelessWidget {
     super.key,
     this.controller,
     required this.hintText,
+    this.prefixIcon,
   });
 
   final TextEditingController? controller;
   final String hintText;
+  final Icon? prefixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -19,19 +21,29 @@ class RoundedTextField extends StatelessWidget {
         color: ColorExtension.placeholder.withValues(alpha: 0.25),
         borderRadius: BorderRadius.circular(30),
       ),
-      child: TextField(
-        controller: controller,
-        autocorrect: false,
-        keyboardType: TextInputType.emailAddress,
-        decoration: InputDecoration(
-          border: InputBorder.none,
-          focusedBorder: InputBorder.none,
-          contentPadding: const EdgeInsets.all(20),
-          enabledBorder: InputBorder.none,
-          hintText: hintText,
-          hintStyle: TextStyle(
-            color: ColorExtension.secondaryText,
-          ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+        child: Row(
+          children: [
+            if (prefixIcon != null) prefixIcon!,
+            Expanded(
+              child: TextField(
+                controller: controller,
+                autocorrect: false,
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  focusedBorder: InputBorder.none,
+                  contentPadding: const EdgeInsets.all(20),
+                  enabledBorder: InputBorder.none,
+                  hintText: hintText,
+                  hintStyle: TextStyle(
+                    color: ColorExtension.secondaryText,
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

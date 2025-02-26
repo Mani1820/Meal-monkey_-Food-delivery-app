@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/Screens/On_boarding/Reset_Password/reset_password_screen.dart';
+import 'package:meal_monkey/Screens/On_boarding/intro_screen.dart';
 import 'package:meal_monkey/Screens/On_boarding/signup_screen.dart';
-import 'package:meal_monkey/Screens/main_screen.dart';
 import 'package:meal_monkey/common/color_entension.dart';
 import 'package:meal_monkey/common_widget/rounded_button.dart';
 import 'package:meal_monkey/common_widget/rounded_text_field.dart';
@@ -65,7 +65,7 @@ class LoginScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const MainScreen(),
+                    builder: (context) => const IntroScreen(),
                   ),
                 );
               },

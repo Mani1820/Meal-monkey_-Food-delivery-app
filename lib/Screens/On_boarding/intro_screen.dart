@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/Data/intro_screen_data.dart';
-import 'package:meal_monkey/Screens/On_boarding/login_screen.dart';
+import 'package:meal_monkey/Screens/main_screen.dart';
 import 'package:meal_monkey/common/color_entension.dart';
 import 'package:meal_monkey/common_widget/rounded_button.dart';
 
@@ -116,7 +116,7 @@ class _IntroScreenState extends State<IntroScreen> {
                     if (selectedIndex == introElementList - 1) {
                       Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
-                          builder: (context) => const LoginScreen(),
+                          builder: (context) => const MainScreen(),
                         ),
                       );
                     }
