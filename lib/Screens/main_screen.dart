@@ -21,6 +21,7 @@ class _MainScreenState extends State<MainScreen> {
         bucket: bucket,
         child: bucketChild,
       ),
+      drawerEnableOpenDragGesture: true,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         backgroundColor: selectedPage == 2
@@ -42,7 +43,7 @@ class _MainScreenState extends State<MainScreen> {
           child: Icon(
             Icons.home,
             color: Colors.white,
-            size: 30,
+            size: 34,
           ),
         ),
       ),
@@ -56,8 +57,8 @@ class _MainScreenState extends State<MainScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             TabScreenButton(
-              icon: Icons.home,
-              title: 'Home',
+              icon: Icons.menu,
+              title: 'Menu',
               selectedPage: selectedPage == 0,
               onTap: () {
                 setState(() {

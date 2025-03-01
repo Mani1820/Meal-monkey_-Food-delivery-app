@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_entension.dart';
 import 'package:meal_monkey/common_widget/catagory_builder.dart';
+import 'package:meal_monkey/common_widget/popular_restaurant_builder.dart';
 import 'package:meal_monkey/common_widget/rounded_text_field.dart';
+import 'package:meal_monkey/common_widget/view_all_row.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -45,7 +47,8 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 19.0),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 19.0, vertical: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -85,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 0),
                 child: RoundedTextField(
                   hintText: 'Search for food',
                   controller: TextEditingController(),
@@ -96,8 +99,30 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
+                height: 20,
+              ),
+              SizedBox(
                 height: 120,
-              CatagoryBuilder(),
+                child: CatagoryBuilder(),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: ViewAllRow(title: 'Popular Restaurants'),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(height: 500, child: PopularRestaurantBuilder()),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: ViewAllRow(title: 'Most Popular'),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: ViewAllRow(title: 'Recent Orders'),
               ),
             ],
           ),
