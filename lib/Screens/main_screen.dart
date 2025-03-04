@@ -34,24 +34,23 @@ class _MainScreenState extends State<MainScreen> {
             });
           }
         },
-        shape: const CircleBorder(),
+        shape: CircleBorder(),
         child: Container(
           height: 100,
           width: 100,
           alignment: Alignment.center,
-          padding: EdgeInsets.all(5),
           child: Icon(
             Icons.home,
             color: Colors.white,
-            size: 34,
+            size: 40,
           ),
         ),
       ),
       bottomNavigationBar: BottomAppBar(
         surfaceTintColor: Color(0xffF4F4F4),
         shape: const CircularNotchedRectangle(),
-        clipBehavior: Clip.hardEdge,
-        notchMargin: 20,
+        clipBehavior: Clip.antiAlias,
+        notchMargin: 15,
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceAround,

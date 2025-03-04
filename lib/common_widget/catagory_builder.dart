@@ -14,10 +14,11 @@ class _CatagoryBuilderState extends State<CatagoryBuilder> {
   Widget build(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
+      physics: BouncingScrollPhysics(),
       itemCount: catagory.length,
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SizedBox(
             height: 50,
             width: 85,
@@ -26,24 +27,28 @@ class _CatagoryBuilderState extends State<CatagoryBuilder> {
               child: Column(
                 children: [
                   Expanded(
-                    child: Image(
-                      image: NetworkImage(
-                        catagory.elementAt(index).imageUrl,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      clipBehavior: Clip.antiAlias,
+                      child: Image(
+                        image: NetworkImage(
+                          catagory.elementAt(index).imageUrl,
+                        ),
+                        fit: BoxFit.cover,
+                        alignment: Alignment.topCenter,
+                        width: 85,
+                        height: 35,
                       ),
-                      fit: BoxFit.cover,
-                      alignment: Alignment.topCenter,
-                      width: 85,
-                      height: 35,
                     ),
                   ),
                   SizedBox(height: 5),
                   Text(
                     catagory.elementAt(index).title,
                     style: TextStyle(
-                      color: ColorExtension.primaryText,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: ColorExtension.primaryText,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Metropolis'),
                   ),
                 ],
               ),
