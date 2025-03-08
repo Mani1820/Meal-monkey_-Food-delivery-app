@@ -3,6 +3,7 @@ import 'package:meal_monkey/common/color_entension.dart';
 import 'package:meal_monkey/common_widget/catagory_builder.dart';
 import 'package:meal_monkey/common_widget/most_popular_builder.dart';
 import 'package:meal_monkey/common_widget/popular_restaurant_builder.dart';
+import 'package:meal_monkey/common_widget/recent_orders_builder.dart';
 import 'package:meal_monkey/common_widget/rounded_text_field.dart';
 import 'package:meal_monkey/common_widget/view_all_row.dart';
 
@@ -14,7 +15,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SafeArea(
               child: SizedBox(
@@ -126,6 +126,10 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: ViewAllRow(title: 'Recent Orders'),
+            ),
+            SizedBox(
+              height: 450,
+              child: RecentOrdersBuilder(),
             ),
           ],
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/Screens/Home/home_screen.dart';
+import 'package:meal_monkey/Screens/Menu/menu_screen.dart';
 import 'package:meal_monkey/common/color_entension.dart';
 import 'package:meal_monkey/common_widget/tab_button.dart';
 
@@ -33,6 +34,11 @@ class _MainScreenState extends State<MainScreen> {
               selectedPage = 2;
             });
           }
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(
+              builder: (context) => const MainScreen(),
+            ),
+          );
         },
         shape: CircleBorder(),
         child: Container(
@@ -62,7 +68,7 @@ class _MainScreenState extends State<MainScreen> {
               onTap: () {
                 setState(() {
                   selectedPage = 0;
-                  bucketChild = HomeScreen();
+                  bucketChild = const MenuScreen();
                 });
               },
             ),

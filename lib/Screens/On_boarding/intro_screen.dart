@@ -114,10 +114,11 @@ class _IntroScreenState extends State<IntroScreen> {
                       : 'Next',
                   onPressed: () {
                     if (selectedIndex == introElementList - 1) {
-                      Navigator.of(context).pushReplacement(
+                      Navigator.of(context).pushAndRemoveUntil(
                         MaterialPageRoute(
                           builder: (context) => const MainScreen(),
                         ),
+                        (route) => false,
                       );
                     }
                     controller.animateToPage(selectedIndex + 1,

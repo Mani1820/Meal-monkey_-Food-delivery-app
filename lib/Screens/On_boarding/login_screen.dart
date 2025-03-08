@@ -62,11 +62,12 @@ class LoginScreen extends StatelessWidget {
               title: 'Login',
               type: ButtonType.backgroundPrimary,
               onPressed: () {
-                Navigator.push(
+                Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const IntroScreen(),
                   ),
+                  (route) => false,
                 );
               },
             ),
@@ -160,10 +161,11 @@ class LoginScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.of(context).pushReplacement(
+                    Navigator.of(context).pushAndRemoveUntil(
                       MaterialPageRoute(
                         builder: (ctx) => const SignupScreen(),
                       ),
+                      (route) => false,
                     );
                   },
                   child: Text(
