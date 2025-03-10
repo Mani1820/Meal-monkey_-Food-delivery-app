@@ -74,22 +74,24 @@ class _MenuScreenState extends State<MenuScreen> {
                 itemBuilder: (context, index) {
                   return Stack(
                     children: [
-                      Container(
-                        margin: const EdgeInsets.only(
-                            left: 60, right: 20, bottom: 20),
-                        height: size.height * 0.11,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color.fromARGB(255, 135, 135, 135),
-                              spreadRadius: 1,
-                              blurRadius: 10,
-                              offset: Offset(0, 5),
-                            ),
-                          ],
-                          color: const Color.fromARGB(255, 255, 255, 255),
+                      InkWell(
+                        child: Container(
+                          margin: const EdgeInsets.only(
+                              left: 60, right: 20, bottom: 20),
+                          height: size.height * 0.11,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                color: const Color.fromARGB(255, 135, 135, 135),
+                                spreadRadius: 1,
+                                blurRadius: 10,
+                                offset: Offset(0, 5),
+                              ),
+                            ],
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                          ),
                         ),
                       ),
                       Row(
