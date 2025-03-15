@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/Data/menu_items_data.dart';
+import 'package:meal_monkey/Screens/Menu/food_list_screen.dart';
 import 'package:meal_monkey/common/color_entension.dart';
 import 'package:meal_monkey/common_widget/rounded_text_field.dart';
 
@@ -36,25 +37,13 @@ class _MenuScreenState extends State<MenuScreen> {
                   height: 20,
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text(
-                    'Menu',
-                    style: TextStyle(
-                        fontFamily: 'Metropolis',
-                        fontSize: 25,
-                        fontWeight: FontWeight.w600,
-                        color: ColorExtension.primaryText),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.search,
-                      size: 25,
-                    ),
-                  ),
-                ],
+              Text(
+                'Menu',
+                style: TextStyle(
+                    fontFamily: 'Metropolis',
+                    fontSize: 25,
+                    fontWeight: FontWeight.w600,
+                    color: ColorExtension.primaryText),
               ),
               SizedBox(
                 height: 20,
@@ -75,6 +64,15 @@ class _MenuScreenState extends State<MenuScreen> {
                   return Stack(
                     children: [
                       InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => FoodListScreen(
+                                title: menuItems[index].title,
+                              ),
+                            ),
+                          );
+                        },
                         child: Container(
                           margin: const EdgeInsets.only(
                               left: 60, right: 20, bottom: 20),
@@ -159,7 +157,17 @@ class _MenuScreenState extends State<MenuScreen> {
                                 color: ColorExtension.primaryBg,
                                 size: 20,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) => FoodListScreen(
+                                        title: menuItems[index].title,
+                                      ),
+                                    ),
+                                  );
+                                };
+                              },
                             ),
                           )
                         ],

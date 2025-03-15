@@ -64,6 +64,54 @@ flutter:
     - Assets/images/image 1.png
     - Assets/images/page_view_1.png
     - Assets/images/page_view_3.png
+    - Assets/images/on_boarding_2.png
+    - Assets/images/add.png
+    - Assets/images/btn_next.png
+    - Assets/images/cash.png
+    - Assets/images/cat_3.png
+    - Assets/images/cat_4.png
+    - Assets/images/cat_sri.png
+    - Assets/images/cat_offer.png
+    - Assets/images/check.png
+    - Assets/images/dess_1.png
+    - Assets/images/dess_2.png
+    - Assets/images/dess_3.png
+    - Assets/images/dess_4.png
+    - Assets/images/detail_top.png
+    - Assets/images/dropdown.png
+    - Assets/images/fav_icon.png
+    - Assets/images/favorites_btn.png
+    - Assets/images/favorites_btn_2.png
+    - Assets/images/item_1.png
+    - Assets/images/item_2.png
+    - Assets/images/item_3.png
+    - Assets/images/location-pin.png
+    - Assets/images/m_res_1.png
+    - Assets/images/m_res_2.png
+    - Assets/images/map_pin.png
+    - Assets/images/menu_1.png
+    - Assets/images/menu_2.png
+    - Assets/images/menu_3.png
+    - Assets/images/menu_4.png
+    - Assets/images/more_info.png
+    - Assets/images/more_my_order.png
+    - Assets/images/more_notification.png
+    - Assets/images/more_payment.png
+    - Assets/images/offer_1.png
+    - Assets/images/offer_2.png
+    - Assets/images/offer_3.png
+    - Assets/images/paypal.png
+    - Assets/images/rate.png
+    - Assets/images/res_1.png
+    - Assets/images/res_2.png
+    - Assets/images/res_3.png
+    - Assets/images/search.png
+    - Assets/images/shop_logo.png
+    - Assets/images/shopping_add.png
+    - Assets/images/shopping_cart.png
+    - Assets/images/thank_you.png
+    - Assets/images/visa_icon.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
