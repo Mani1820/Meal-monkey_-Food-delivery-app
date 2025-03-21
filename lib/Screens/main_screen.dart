@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/Screens/Home/home_screen.dart';
 import 'package:meal_monkey/Screens/Menu/menu_screen.dart';
+import 'package:meal_monkey/Screens/offers/offer_screen.dart';
+import 'package:meal_monkey/Screens/profile/profile_screen.dart';
 import 'package:meal_monkey/common/color_entension.dart';
 import 'package:meal_monkey/common_widget/tab_button.dart';
 
@@ -79,7 +81,7 @@ class _MainScreenState extends State<MainScreen> {
               onTap: () {
                 setState(() {
                   selectedPage = 1;
-                  bucketChild = HomeScreen();
+                  bucketChild = OfferScreen();
                 });
               },
             ),
@@ -93,7 +95,7 @@ class _MainScreenState extends State<MainScreen> {
               onTap: () {
                 setState(() {
                   selectedPage = 3;
-                  bucketChild = HomeScreen();
+                  bucketChild = ProfileScreen();
                 });
               },
             ),
