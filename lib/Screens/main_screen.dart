@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/Screens/Home/home_screen.dart';
 import 'package:meal_monkey/Screens/Menu/menu_screen.dart';
+import 'package:meal_monkey/Screens/more/more_screen.dart';
 import 'package:meal_monkey/Screens/offers/offer_screen.dart';
 import 'package:meal_monkey/Screens/profile/profile_screen.dart';
 import 'package:meal_monkey/common/color_entension.dart';
@@ -106,7 +107,7 @@ class _MainScreenState extends State<MainScreen> {
               onTap: () {
                 setState(() {
                   selectedPage = 4;
-                  bucketChild = HomeScreen();
+                  bucketChild = MoreScreen();
                 });
               },
             ),
