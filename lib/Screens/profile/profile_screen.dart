@@ -1,13 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_entension.dart';
+import 'package:meal_monkey/common_widget/modal_bottom_sheet_profile.dart';
 import 'package:meal_monkey/common_widget/profile_element.dart';
 import 'package:meal_monkey/common_widget/profile_element2.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
   @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen>
+    with TickerProviderStateMixin {
+  @override
   Widget build(BuildContext context) {
+    // var media = MediaQuery.of(context).size;
+    void onTapEdit() {
+      showModalBottomSheet(
+          isScrollControlled: true,
+          sheetAnimationStyle: AnimationStyle(
+            curve: Curves.easeIn,
+            duration: Duration(milliseconds: 500),
+            reverseCurve: Curves.easeInBack,
+            reverseDuration: Duration(milliseconds: 500),
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20),
+              topRight: Radius.circular(20),
+            ),
+          ),
+          context: context,
+          builder: (context) {
+            return ModalBottomSheetProfile();
+          });
+    }
+
     return Scaffold(
       body: Column(
         children: [
@@ -51,14 +80,20 @@ class ProfileScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.edit, color: ColorExtension.primaryBg),
-              Text(
-                'Edit Profile',
-                style: TextStyle(
-                  fontFamily: 'Metropolis',
-                  fontSize: 15,
-                  fontWeight: FontWeight.w400,
-                  color: ColorExtension.primaryBg,
+              Icon(
+                Icons.edit,
+                color: ColorExtension.primaryBg,
+              ),
+              InkWell(
+                onTap: onTapEdit,
+                child: Text(
+                  'Edit Profile',
+                  style: TextStyle(
+                    fontFamily: 'Metropolis',
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                    color: ColorExtension.primaryBg,
+                  ),
                 ),
               ),
             ],
